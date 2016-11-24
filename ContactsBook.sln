@@ -19,6 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsBook.Translations",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactsBook.API.Tests", "ContactsBook.API.Tests\ContactsBook.API.Tests.csproj", "{789BC44B-6775-4CFA-B1C1-4A146DFE18DD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B28A7C0F-D7F2-4A82-85D8-B6E17D7A902F}"
+	ProjectSection(SolutionItems) = preProject
+		ContactsBook.postman_collection.json = ContactsBook.postman_collection.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

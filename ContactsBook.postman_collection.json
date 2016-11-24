@@ -1,0 +1,107 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Contacts Book",
+		"_postman_id": "c311a2cf-cc0f-9a27-b672-6a8ae598af82",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get contacts list",
+			"request": {
+				"url": "http://localhost:35970/api/Contacts",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get invalid contact",
+			"request": {
+				"url": "http://localhost:35970/api/Contacts/12",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get valid contact",
+			"request": {
+				"url": "http://localhost:35970/api/Contacts/1",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add contact",
+			"request": {
+				"url": "http://localhost:35970/api/Contacts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"FirstName\": \"first name - 3\",\n \"LastName\": \"last name - 3\",\n \"Emails\": [\n   \"email3@home.es\",\n   \"email4@home.es\"\n ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update contact",
+			"request": {
+				"url": "http://localhost:35970/api/Contacts",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"ContactId\": 3,\t\n \"FirstName\": \"first name - 3\",\n \"LastName\": \"last name - 3\",\n \"Emails\": [\n   \"email3@home.es\",\n   \"email4@home.es\"\n ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Remove contact",
+			"request": {
+				"url": "http://localhost:35970/api/Contacts/3",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
