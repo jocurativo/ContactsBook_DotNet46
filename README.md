@@ -2,6 +2,7 @@
 
 API example using best practices:
 - DDD
+- Unit of work
 - IoC (Autofac)
 - TDD (RhinoMocks)
 - ORM (EF)
