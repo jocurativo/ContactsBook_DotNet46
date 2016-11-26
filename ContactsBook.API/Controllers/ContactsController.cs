@@ -17,11 +17,60 @@ namespace ContactsBook.API.Controllers
         public ContactsController(IServiceFactory factory)
             :base(factory)
         {}
+
+        /**
+         * @api {get} /api/contacts Get the list of contacts
+         * @apiName GetContacts
+         * @apiGroup Contacts
+         * @apiVersion 1.0.0
+         * @apiDescription  Get the list of contacts
+         *
+         * @apiSuccessExample Success-Response:
+         *     HTTP/1.1 200 OK
+         *  [{
+         *  "ContactId":1,
+         *  "FirstName":"First Name 1",
+         *  "LastName":"Last Name 1",
+         *  },
+         *  {
+         *  "ContactId":2,
+         *  "FirstName":"First Name 2",
+         *  "LastName":"Last Name 2",
+         *  },
+         *  .....
+         *  ]
+         */
         public IEnumerable<ContactInfoDto> Get()
         {
             return this.Factory.ContactsService.GetFiltered(string.Empty);
         }
 
+        /**
+         * @api {get} /api/contacts/:id Get contact details
+         * @apiName GetContactDetails
+         * @apiGroup Contacts
+         * @apiVersion 1.0.0
+         * @apiDescription  Get the contact details
+         *
+         * @apiParam {Integer} id Contact ID.
+         *
+         * @apiSuccessExample Success-Response:
+         *     HTTP/1.1 200 OK
+         *  {
+         *    "ContactId": 1,
+         *    "FirstName": "First Name",
+         *    "LastName": "Last Name",
+         *    "Emails": [
+         *          "one@gmail.com", 
+         *          "second@gmail.com"
+         *    ]
+         *  }
+         *
+         *
+         * @apiErrorExample  Error-Response:
+         *     HTTP/1.1 404 Not Found
+         *
+         */
         public IHttpActionResult Get(int id)
         {
             var contact = this.Factory.ContactsService.GetById(id);
@@ -32,6 +81,28 @@ namespace ContactsBook.API.Controllers
             return Ok(contact);
         }
 
+        /**
+         * @api {post} /api/contacts Add a new contact
+         * @apiName AddContact
+         * @apiGroup Contacts
+         * @apiVersion 1.0.0
+         * @apiDescription  Add a new contact
+         *
+         * @apiParam {String} FirstName First name
+         * @apiParam {String} LastName Last name
+         * @apiParam {Array} Emails List of emails
+         *
+         * @apiSuccessExample Success-Response:
+         *     HTTP/1.1 200 OK
+         *
+         *
+         * @apiErrorExample  Error-Response:
+         *     HTTP/1.1 400 Bad Request
+         *     {
+         *      "Message": "Email example@gmail.com is already in use"
+         *     }
+         *
+         */
         public IHttpActionResult Post([FromBody]Contact contact)
         {
             try
@@ -50,6 +121,29 @@ namespace ContactsBook.API.Controllers
             }
         }
 
+        /**
+         * @api {put} /api/contacts Update a contact
+         * @apiName UpdateContact
+         * @apiGroup Contacts
+         * @apiVersion 1.0.0
+         * @apiDescription  Update a contact
+         *
+         * @apiParam {Integer} ContactId Contact ID
+         * @apiParam {String} FirstName First name
+         * @apiParam {String} LastName Last name
+         * @apiParam {Array} Emails List of emails
+         *
+         * @apiSuccessExample Success-Response:
+         *     HTTP/1.1 200 OK
+         *
+         *
+         * @apiErrorExample  Error-Response:
+         *     HTTP/1.1 400 Bad Request
+         *     {
+         *      "Message": "Email example@gmail.com is already in use"
+         *     }
+         *
+         */
         public IHttpActionResult Put([FromBody]Contact contact)
         {
             try
@@ -68,6 +162,26 @@ namespace ContactsBook.API.Controllers
             }
         }
 
+        /**
+         * @api {delete} /api/contacts Remove a contact
+         * @apiName RemoveContact
+         * @apiGroup Contacts
+         * @apiVersion 1.0.0
+         * @apiDescription  Remove a contact
+         *
+         * @apiParam {Integer} id Contact ID
+         *
+         * @apiSuccessExample Success-Response:
+         *     HTTP/1.1 200 OK
+         *
+         *
+         * @apiErrorExample  Error-Response:
+         *     HTTP/1.1 400 Bad Request
+         *     {
+         *      "Message": "Invalid contact id"
+         *     }
+         *
+         */
         public IHttpActionResult Delete(int id)
         {
             try

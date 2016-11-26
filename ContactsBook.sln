@@ -22,6 +22,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B28A7C0F-D7F2-4A82-85D8-B6E17D7A902F}"
 	ProjectSection(SolutionItems) = preProject
 		ContactsBook.postman_collection.json = ContactsBook.postman_collection.json
+		Generate API docs.txt = Generate API docs.txt
 	EndProjectSection
 EndProject
 Global

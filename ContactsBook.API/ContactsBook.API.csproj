@@ -89,6 +89,70 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="apidoc\api_data.js" />
+    <Content Include="apidoc\api_project.js" />
+    <Content Include="apidoc\css\style.css" />
+    <Content Include="apidoc\img\favicon.ico" />
+    <Content Include="apidoc\img\glyphicons-halflings-white.png" />
+    <Content Include="apidoc\img\glyphicons-halflings.png" />
+    <Content Include="apidoc\index.html" />
+    <Content Include="apidoc\locales\de.js" />
+    <Content Include="apidoc\locales\es.js" />
+    <Content Include="apidoc\locales\fr.js" />
+    <Content Include="apidoc\locales\locale.js" />
+    <Content Include="apidoc\locales\nl.js" />
+    <Content Include="apidoc\locales\pl.js" />
+    <Content Include="apidoc\locales\pt_br.js" />
+    <Content Include="apidoc\locales\ru.js" />
+    <Content Include="apidoc\locales\zh.js" />
+    <Content Include="apidoc\locales\zh_cn.js" />
+    <Content Include="apidoc\main.js" />
+    <Content Include="apidoc\utils\handlebars_helper.js" />
+    <Content Include="apidoc\utils\send_sample_request.js" />
+    <Content Include="apidoc\vendor\bootstrap-responsive.min.css" />
+    <Content Include="apidoc\vendor\bootstrap.min.css" />
+    <Content Include="apidoc\vendor\bootstrap.min.js" />
+    <Content Include="apidoc\vendor\diff_match_patch.min.js" />
+    <Content Include="apidoc\vendor\handlebars.min.js" />
+    <Content Include="apidoc\vendor\jquery.min.js" />
+    <Content Include="apidoc\vendor\lodash.min.js" />
+    <Content Include="apidoc\vendor\path-to-regexp\index.js" />
+    <Content Include="apidoc\vendor\polyfill.js" />
+    <Content Include="apidoc\vendor\prettify.css" />
+    <Content Include="apidoc\vendor\prettify\lang-apollo.js" />
+    <Content Include="apidoc\vendor\prettify\lang-basic.js" />
+    <Content Include="apidoc\vendor\prettify\lang-clj.js" />
+    <Content Include="apidoc\vendor\prettify\lang-css.js" />
+    <Content Include="apidoc\vendor\prettify\lang-dart.js" />
+    <Content Include="apidoc\vendor\prettify\lang-erlang.js" />
+    <Content Include="apidoc\vendor\prettify\lang-go.js" />
+    <Content Include="apidoc\vendor\prettify\lang-hs.js" />
+    <Content Include="apidoc\vendor\prettify\lang-lisp.js" />
+    <Content Include="apidoc\vendor\prettify\lang-llvm.js" />
+    <Content Include="apidoc\vendor\prettify\lang-lua.js" />
+    <Content Include="apidoc\vendor\prettify\lang-matlab.js" />
+    <Content Include="apidoc\vendor\prettify\lang-ml.js" />
+    <Content Include="apidoc\vendor\prettify\lang-mumps.js" />
+    <Content Include="apidoc\vendor\prettify\lang-n.js" />
+    <Content Include="apidoc\vendor\prettify\lang-pascal.js" />
+    <Content Include="apidoc\vendor\prettify\lang-proto.js" />
+    <Content Include="apidoc\vendor\prettify\lang-r.js" />
+    <Content Include="apidoc\vendor\prettify\lang-rd.js" />
+    <Content Include="apidoc\vendor\prettify\lang-scala.js" />
+    <Content Include="apidoc\vendor\prettify\lang-sql.js" />
+    <Content Include="apidoc\vendor\prettify\lang-tcl.js" />
+    <Content Include="apidoc\vendor\prettify\lang-tex.js" />
+    <Content Include="apidoc\vendor\prettify\lang-vb.js" />
+    <Content Include="apidoc\vendor\prettify\lang-vhdl.js" />
+    <Content Include="apidoc\vendor\prettify\lang-wiki.js" />
+    <Content Include="apidoc\vendor\prettify\lang-xq.js" />
+    <Content Include="apidoc\vendor\prettify\lang-yaml.js" />
+    <Content Include="apidoc\vendor\prettify\prettify.css" />
+    <Content Include="apidoc\vendor\prettify\prettify.js" />
+    <Content Include="apidoc\vendor\prettify\run_prettify.js" />
+    <Content Include="apidoc\vendor\require.min.js" />
+    <Content Include="apidoc\vendor\semver.min.js" />
+    <Content Include="apidoc\vendor\webfontloader.js" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
@@ -104,6 +168,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="apidoc\api_data.json" />
+    <Content Include="apidoc\api_project.json" />
+    <Content Include="apidoc\vendor\path-to-regexp\LICENSE" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,7 @@
+First install apidoc package:
+
+npm install apidoc -g
+
+Open the folder containing the API project and generate the documentation:
+
+apidoc -i Controllers/ -o apidoc/
