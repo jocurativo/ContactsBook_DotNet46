@@ -8,6 +8,7 @@ using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.WebApi;
 using ContactsBook.Framework.Contracts.Factories;
+using ContactsBook.Repositories.Dapper;
 using ContactsBook.Repositories.EF;
 using ContactsBook.Services;
 
@@ -24,6 +25,7 @@ namespace ContactsBook.API
 
             //Register custom types
             builder
+                //.RegisterType<DapperUnitOfWork>()
                 .RegisterType<EFUnitOfWork>()
                 .As<IUnitOfWork>()
                 .InstancePerRequest();

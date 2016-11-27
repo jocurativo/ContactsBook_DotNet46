@@ -187,6 +187,10 @@
       <Project>{800b44d9-d056-4f2f-b84d-70e874b41997}</Project>
       <Name>ContactsBook.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ContactsBook.Repositories.Dapper\ContactsBook.Repositories.Dapper.csproj">
+      <Project>{38028fbf-78f1-4755-aa91-8558df5e4305}</Project>
+      <Name>ContactsBook.Repositories.Dapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ContactsBook.Repositories.EF\ContactsBook.Repositories.EF.csproj">
       <Project>{6d432698-f85e-4e07-b5f4-bd361d998877}</Project>
       <Name>ContactsBook.Repositories.EF</Name>

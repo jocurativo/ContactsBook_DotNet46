@@ -17,4 +17,5 @@ ContactsBook.Translations/obj
 packages
 .vs
 TestResults
-
+ContactsBook.Repositories.Dapper/bin
+ContactsBook.Repositories.Dapper/obj
