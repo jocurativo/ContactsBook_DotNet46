@@ -114,7 +114,11 @@ namespace ContactsBook.API.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            catch(Exception ex)
+            catch (EntityValidationException ex)
+            {
+                return BadRequest(string.Join(",", ex.Validations.Select(x => x.ErrorMessage)));
+            }
+            catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
                 return BadRequest();
@@ -154,6 +158,10 @@ namespace ContactsBook.API.Controllers
             catch (BusinessException ex)
             {
                 return BadRequest(ex.Message);
+            }
+            catch(EntityValidationException ex)
+            {
+                return BadRequest(string.Join(",", ex.Validations.Select(x => x.ErrorMessage)));
             }
             catch (Exception ex)
             {
