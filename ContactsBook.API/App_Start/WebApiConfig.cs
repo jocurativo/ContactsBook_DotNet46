@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ContactsBook.API
 {
@@ -13,6 +14,13 @@ namespace ContactsBook.API
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+            //Add cors
+
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
+
+            //Add default routes
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
